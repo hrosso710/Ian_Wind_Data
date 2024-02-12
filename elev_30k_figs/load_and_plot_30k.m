@@ -1,5 +1,5 @@
 %% Read in fort.61 data for both OWI and HOL and load in max elevation as array 30k
-load('/Users/haleyrosso/Documents/ADCIRC_work/adcirc_util/IO/3D_mesh_plot.mat')
+load('3D_mesh_plot.mat')
 
 fort61_OWI = read_adcirc_fort61('OWI_fort.61',[2022,09,19,12,0,0]);
 fort61_HOL = read_adcirc_fort61('HOL_fort.61',[2022,09,19,12,0,0]);
