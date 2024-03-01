@@ -112,7 +112,15 @@ xlabel('Time Step (s)','Interpreter','latex','FontSize', 15)
 sgtitle('Recorded Elevation at Various Stations','Interpreter','latex','FontSize', 20)
 
 
-
+figure()
+plot(fort61_HOL.zeta(:,11),'LineWidth',2.0,'Color','#2AB8AB')
+hold on
+plot(fort61_OWI.zeta(:,11),'LineWidth',2.0,'Color','#C12283')
+xlim([1000 2400])
+title('Station Elevation','Interpreter','latex','FontSize', 18)
+ylabel('Surge Elevation','Interpreter','latex','FontSize', 15)
+xlabel('Time Step (s)','Interpreter','latex','FontSize', 15)
+legend('Holland','OWI','Interpreter','latex','FontSize', 15)
 
 
 
@@ -123,19 +131,8 @@ sgtitle('Recorded Elevation at Various Stations','Interpreter','latex','FontSize
 figure()
 hold on
 scatter(S(:,1),S(:,2),50,HOL_maxele63(:,2),'filled')
-scatter(-78.973,33.500,50,'o','filled','MarkerFaceColor','black')
-scatter(-79.090,32.400,50,'o','filled','MarkerFaceColor','black')
-scatter(-79.040,30.900,50,'o','filled','MarkerFaceColor','black')
-scatter(-79.850,31.000,50,'o','filled','MarkerFaceColor','black')
-scatter(-79.740,29.300,50,'o','filled','MarkerFaceColor','black')
-scatter(-82.540,26.300,50,'o','filled','MarkerFaceColor','black')
-scatter(-82.790,25.600,50,'o','filled','MarkerFaceColor','black')
-scatter(-79.240,29.900,50,'o','filled','MarkerFaceColor','black')
-scatter(-80.340,30.900,50,'o','filled','MarkerFaceColor','black')
-scatter(-82.600,25.700,50,'o','filled','MarkerFaceColor','black')
 colorbar
 colormap jet
-clim([500 3000]) 
 title('Maximum Elevation with Holland Wind Model','Interpreter','latex','FontSize', 20)
 xlabel('Latitude','Interpreter','latex','FontSize', 15)
 ylabel('Longitude','Interpreter','latex','FontSize', 15)
